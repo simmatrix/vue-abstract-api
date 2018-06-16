@@ -120,8 +120,7 @@ class Resource extends Endpoint {
    */
   async one ( id, options = {} ) {
     const response = await this.get( `${this.path}/${id}`, options );
-
-    return response.first;
+    return response.response.data;
   }
 
   /**
